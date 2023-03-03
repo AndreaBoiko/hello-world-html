@@ -48,15 +48,14 @@
   color: var(--subtext-color);
   padding: 15px 20px;
   box-sizing: border-box;
+  opacity: 0.5;
 }
 
 .tab-box__button-img {
   width: 25px;
 }
 
-.menu__tab-box-content,
-.menu__tab-box-content-burger,
-.menu__tab-box-content-salad {
+.menu__tab-box-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -66,9 +65,7 @@
   padding-top: 50px;
 }
 
-.menu__tab-box-card-container,
-.menu__tab-box-card-container-salad,
-.menu__tab-box-card-container-burger {
+.menu__tab-box-card-container {
   width: 45%;
   display: flex;
   flex-direction: row;
@@ -117,11 +114,12 @@
 }
 
 .menu__tab-box--active {
-  border-bottom: 1px solid var(--icon-color);
-  z-index: 3;
+  border-bottom: 3px solid var(--icon-color);
+  z-index: 1;
+  opacity: 100%;
 }
 
-.button__download-menu{
+.button__download-menu {
   background-color: var(--icon-color);
   border: none;
   font-family: var(--font-family);
@@ -129,12 +127,18 @@
   font-weight: 600;
   color: var(--subtitle-header-color);
   border-radius: 28px;
-  width: 15%;
+  width: 179px;
   padding: 17px 0;
   margin-bottom: 100px;
 }
 
-.button__download-menu:hover{
+.button__download-menu:hover {
   cursor: pointer;
   background-color: var(--subtext-color);
+}
+
+@media (max-width: 770px) {
+  .menu__tab-box-card-container {
+    width: 90%;
+  }
 }
